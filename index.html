@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>우리 모두 최고심 짱이심</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">
+      <h1>모든 비지님들께 바칩니다 우리 모두 앞으로 남은 시간 화이팅 하시고 지치지 마시고 끝까지 달려갑쉐이 우리는 성공할겁니다 아무도 우릴 막을 수 없으셈; 우리가 성공하지 누가 성공하는데 ;;; 우리
+        모두
+        최고심 짱이심 >< 할 수 있다 할 수 있다아아 할 수 있다아아악!!!!! 할 수 있다 할 수 있다아아 할 수 있다아아악!!!!!</h1>
+          <div class="desc-wrap">
+            <p class="desc-title"> 명심 또 명심 </p>
+            <p class="desc"><span>1.</span>나는 세비지다</p>
+            <p class="desc"><span>2.</span>나는 멋지다</p>
+            <p class="desc"><span>3.</span>나는 짱이다</p>
+            <p class="desc"><span>4.</span>나는 성공한다</p>
+            <p class="desc"><span>5.</span>나는 굿이다</p>
+            <p class="desc"><span>6.</span>나는 베리굿이다</p>
+          </div>
+    </div>
+
+
+    <article class="slide">
+      <ul class="list-items">
+        <li>
+          <img src="./images/_1.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_2.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_3.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_4.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_5.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_6.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_7.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_8.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_9.jpeg" alt="">
+        </li>
+        <li>
+          <img src="./images/_10.jpeg" alt="">
+        </li>
+      </ul>
+    </article>
+
+    <div class="btn-wrap">
+      <button class="btn-prev">◀ 뒤로가보자고</button>
+      <button class="btn-next">가보자고 ▶</button>
+    </div>
+  </div>
+
+  <script>
+
+    const center = document.querySelector('.list-items');
+    const items = document.querySelectorAll('li');
+    const radius = items[0].offsetWidth * items.length / 3.14 / 2;
+    const angle = 360 / items.length;
+    let currAngle = 0;
+
+    document.addEventListener('click', (event) => {
+      if (window.innerWidth / 2 < event.clientX) {
+        currAngle = currAngle + angle;
+      } else {
+        currAngle = currAngle - angle;
+      }
+      center.style.transform = `translate(-50%,-50%) rotateY(${currAngle}deg)`
+    });
+
+
+
+  </script>
+</body>
+
+</html>
